@@ -17,6 +17,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,13 +53,15 @@ public class CrearProductoActivity extends AppCompatActivity
     private FloatingActionButton fotoproducto_btn;
     private String imagen_path;
     private boolean foto_tomada;
-    
+
+    private Spinner spinnerCategoria;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_producto);
-        
+
         descripcionProdView = findViewById(R.id.descripcionProd);
         costoView = findViewById(R.id.costo);
         precioView = findViewById(R.id.precio);
@@ -67,30 +70,32 @@ public class CrearProductoActivity extends AppCompatActivity
         cantidadView = findViewById(R.id.cantidad);
         imagenProd = findViewById(R.id.imagenProd);
         fotoproducto_btn = findViewById(R.id.fotoproducto_btn);
-        
+        //AGREGADO
+        spinnerCategoria = findViewById(R.id.spinnerCategoria);
+
         toolbar = findViewById(R.id.crearArticuloToolBar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.articulo);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        
+
         imagen_path = "";
         foto_tomada = false;
-        
+
         //Crando carpeta temporal para fotos
         File temp = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "temp");
         temp.mkdir();
-        
+
         modoEdicion = getIntent().getExtras() != null;
         if (modoEdicion)
         {
             llenarFormulario();
             bloquearCampos();
         }
-        
+
         descripcion_original = ((TextView) findViewById(R.id.descripcionProd)).getText().toString();
         agregarListeners();
     }
-    
+
     private void agregarListeners()
     {
 
@@ -127,7 +132,7 @@ public class CrearProductoActivity extends AppCompatActivity
         });
 
         */
-        
+
         //Salir de la ventana
         toolbar.setNavigationOnClickListener(new View.OnClickListener()
         {
@@ -138,21 +143,21 @@ public class CrearProductoActivity extends AppCompatActivity
             }
         });
     }
-    
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.crear_bar, menu);
-        
+
         if (!modoEdicion)
         {
             menu.setGroupVisible(R.id.group_edicion, false);
         }
-        
+
         return true;
     }
-    
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -174,10 +179,10 @@ public class CrearProductoActivity extends AppCompatActivity
                 break;
             }
         }
-        
+
         return true;
     }
-    
+
     private void bloquearCampos()
     {
         descripcionProdView.setEnabled(false);
@@ -186,8 +191,9 @@ public class CrearProductoActivity extends AppCompatActivity
         codigoView.setEnabled(false);
         cantidadView.setEnabled(false);
         fotoproducto_btn.setVisibility(View.INVISIBLE);
+        spinnerCategoria.setEnabled(false);
     }
-    
+
     private void permitirEdicion()
     {
         descripcionProdView.setEnabled(true);
@@ -196,18 +202,28 @@ public class CrearProductoActivity extends AppCompatActivity
         codigoView.setEnabled(true);
         cantidadView.setEnabled(true);
         fotoproducto_btn.setVisibility(View.VISIBLE);
+        spinnerCategoria.setEnabled(true);
     }
-    
+
     private void llenarFormulario()
     {
         Articulo articulo = Articulo.obtenerInstancia(getIntent().getExtras().getString("descripcion"));
-        
+
         descripcionProdView.setText(articulo.getDescripcion());
         costoView.setText(articulo.getCosto() + "");
         precioView.setText(articulo.getPrecio() + "");
-        //precioBsView.setText(Herramientas.formatearMonedaSoles(articulo.getPrecioSoles()));
         codigoView.setText(articulo.getCodigo());
         cantidadView.setText(articulo.getCantidad() + "");
+
+        // Seleccionar la categoría correcta en el spinner
+        String[] categorias = getResources().getStringArray(R.array.categorias_array);
+        for (int i = 0; i < categorias.length; i++) {
+            if (categorias[i].equals(articulo.getCategoria())) {
+                spinnerCategoria.setSelection(i);
+                break;
+            }
+        }
+
         int height = imagenProd.getDrawable().getIntrinsicHeight();
         int width = imagenProd.getDrawable().getIntrinsicWidth();
         if (!articulo.getImagen_path().equals(""))
@@ -217,12 +233,12 @@ public class CrearProductoActivity extends AppCompatActivity
         cantidad_original = articulo.getCantidad();
         imagen_path = articulo.getImagen_path();
     }
-    
+
     public boolean validarDatos()
     {
         boolean todoBien = true;
         String error = "No puede estar vacío.";
-        
+
         if (descripcionProdView.getText().toString().equals(""))
         {
             descripcionProdView.setError(error);
@@ -244,29 +260,30 @@ public class CrearProductoActivity extends AppCompatActivity
             cantidadView.setError("Revise este campo.");
             todoBien = false;
         }
-        
+
         return todoBien;
     }
-    
+
     public void eliminarArticulo()
     {
         Articulo articulo = Articulo.obtenerInstancia(descripcion_original);
         new ConfirmarEliminacionDialogFragment(this, articulo).show(getSupportFragmentManager(), null);
     }
-    
+
     public void salvarDatos()
     {
         if (!validarDatos())
         {
             return;
         }
-        
+
         String descripcion = descripcionProdView.getText().toString();
         float costo = Float.parseFloat(costoView.getText().toString());
         float precio = Float.parseFloat(precioView.getText().toString());
         int cantidad = Integer.parseInt(cantidadView.getText().toString());
         String codigo = codigoView.getText().toString();
-        
+        String categoria = spinnerCategoria.getSelectedItem().toString();
+
         //Si se tomo una foto guardar archivo temporal en la carpeta de fotos
         if (foto_tomada)
         {
@@ -275,10 +292,10 @@ public class CrearProductoActivity extends AppCompatActivity
             temp.renameTo(definitivo);
             imagen_path = definitivo.getAbsolutePath();
         }
-        
-        Articulo articulo = new Articulo(descripcion, costo, precio, cantidad, codigo, imagen_path);
+
+        Articulo articulo = new Articulo(descripcion, costo, precio, cantidad, codigo, imagen_path, categoria);
         int cambio_stock = cantidad - cantidad_original;
-        
+
         //si se modifico la descripcion
         if (!descripcion_original.equals(articulo.getDescripcion()))
         {
@@ -329,7 +346,7 @@ public class CrearProductoActivity extends AppCompatActivity
             actualizarArticulo(articulo, cambio_stock);
         }
     }
-    
+
     public void actualizarArticulo(Articulo articulo, int cambio_stock)
     {
         articulo.actualizar();
@@ -339,9 +356,9 @@ public class CrearProductoActivity extends AppCompatActivity
         }
         finish();
     }
-    
+
     //<-------------------------------Metodos para capturar una foto------------------------------->
-    
+
     public void obtenerImagen(View view)
     {
         //Si ya se tomo una foto
@@ -352,19 +369,19 @@ public class CrearProductoActivity extends AppCompatActivity
         }
         new ElegirProveedorDeImagenDialogFragment().show(getSupportFragmentManager(), null);
     }
-    
+
     @RequiresApi(api = Build.VERSION_CODES.Q)
-    
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
     {
-        
+
         super.onActivityResult(requestCode, resultCode, data);
-        
+
         if (resultCode == RESULT_OK)
         {
             foto_tomada = true;
-            
+
             if (requestCode == PICTURE_FROM_GALLERY)
             {
                 imagenProd.setImageURI(data.getData());
@@ -378,7 +395,7 @@ public class CrearProductoActivity extends AppCompatActivity
         }
     }
     //<-------------------------------Metodos para capturar una foto------------------------------->
-    
+
     @Override
     public void finish()
     {

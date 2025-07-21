@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.teamihc.inventas"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="34" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@drawable/icono_con_fondo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icono_sin_fondo"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.InVentas" >
+        <activity
+            android:name="com.teamihc.inventas.activities.HistorialTasaActivity"
+            android:parentActivityName="com.teamihc.inventas.activities.MainActivity" />
+        <activity
+            android:name="com.teamihc.inventas.activities.HistorialVentasActivity"
+            android:parentActivityName="com.teamihc.inventas.activities.MainActivity" />
+        <activity
+            android:name="com.teamihc.inventas.activities.CarritoActivity"
+            android:parentActivityName="com.teamihc.inventas.activities.CarritoActivity" />
+        <activity
+            android:name="com.teamihc.inventas.activities.FacturaActivity"
+            android:parentActivityName="com.teamihc.inventas.activities.MainActivity" />
+        <activity
+            android:name="com.teamihc.inventas.activities.CrearProductoActivity"
+            android:parentActivityName="com.teamihc.inventas.activities.MainActivity" />
+        <activity
+            android:name="com.teamihc.inventas.activities.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.teamihc.inventas.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" >
+            </meta-data>
+        </provider>
+    </application>
+
+</manifest>

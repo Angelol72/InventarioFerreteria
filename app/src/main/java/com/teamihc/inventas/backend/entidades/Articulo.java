@@ -33,9 +33,10 @@ public class Articulo implements Entidad
     private float precio;
     private int cantidad;
     private String codigo;
+    private String categoria;
     String imagen_path;
     //</editor-fold>
-    
+
     /**
      * Crea una instancia de un artículo, para poder hacer las operaciones básicas en la Base de
      * Datos (CRUD). Nota: Para un nuevo producto, la cantidad se settea automaticamente en 0
@@ -53,6 +54,7 @@ public class Articulo implements Entidad
         this.precio = precio;
         this.cantidad = cantidad;
         this.codigo = codigo;
+        this.categoria = "Ferretería general"; // Valor por defecto
     }
 
     public Articulo(String descripcion, float costo, float precio, int cantidad, String codigo, String imagen_path)
@@ -63,8 +65,20 @@ public class Articulo implements Entidad
         this.cantidad = cantidad;
         this.codigo = codigo;
         this.imagen_path = imagen_path;
+        this.categoria = "Ferretería general"; // Valor por defecto
     }
-    
+
+    public Articulo(String descripcion, float costo, float precio, int cantidad, String codigo, String imagen_path, String categoria)
+    {
+        this.descripcion = descripcion.trim();
+        this.costo = costo;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.codigo = codigo;
+        this.imagen_path = imagen_path;
+        this.categoria = categoria;
+    }
+
     //<editor-fold desc="Getters & Setters">
     public String getDescripcion()
     {
@@ -112,6 +126,13 @@ public class Articulo implements Entidad
     public void setImagen_path(String imagen_path) {
         this.imagen_path = imagen_path;
     }
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 
     public float getPrecioSoles()
     {
@@ -123,7 +144,7 @@ public class Articulo implements Entidad
     {
         return getPrecioSoles();
     }
-    
+
     public boolean isActivo()
     {
         String query =
@@ -143,8 +164,8 @@ public class Articulo implements Entidad
     public boolean registrar()
     {
         String query =
-                "INSERT INTO v_articulos (descripcion, costo_unitario, precio_venta, cantidad, codigo, imagen, estado) " +
-                        "VALUES (?,?,?,?,?,?,?);";
+                "INSERT INTO v_articulos (descripcion, costo_unitario, precio_venta, cantidad, codigo, imagen, estado, categoria) " +
+                        "VALUES (?,?,?,?,?,?,?,?);";
         DBOperacion op = new DBOperacion(query);
         op.pasarParametro(descripcion);
         op.pasarParametro(costo);
@@ -153,15 +174,16 @@ public class Articulo implements Entidad
         op.pasarParametro(codigo);
         op.pasarParametro(imagen_path);
         op.pasarParametro("activo");
+        op.pasarParametro(categoria);
 
         if (op.ejecutar() != 0){
             agregarStock(cantidad, Calendar.getInstance().getTime());
             return true;
         }
-        
-       return false;
+
+        return false;
     }
-    
+
     @Override
     public int obtenerId()
     {
@@ -171,9 +193,9 @@ public class Articulo implements Entidad
                         "LIMIT 1";
         DBOperacion op = new DBOperacion(query);
         op.pasarParametro(descripcion);
-        
+
         DBMatriz resultado = op.consultar();
-        
+
         int id = -1;
         if (resultado.leer())
         {
@@ -181,7 +203,7 @@ public class Articulo implements Entidad
         }
         return id;
     }
-    
+
     /**
      * Obtiene una instancia del artículo que corresponda a la descripción indicada.
      *
@@ -193,7 +215,7 @@ public class Articulo implements Entidad
         String query = "SELECT * FROM v_articulos WHERE descripcion = ?";
         DBOperacion op = new DBOperacion(query);
         op.pasarParametro(descripcion.trim());
-        
+
         DBMatriz resultado = op.consultar();
         if (resultado.leer())
         {
@@ -202,10 +224,11 @@ public class Articulo implements Entidad
             int cantidad = (int) resultado.getValor("cantidad");
             String codigo = (String) resultado.getValor("codigo");
             String imagen_path = (String) resultado.getValor("imagen");
-            
-            return new Articulo(descripcion, costo, precio, cantidad, codigo, imagen_path);
+            String categoria = (String) resultado.getValor("categoria");
+
+            return new Articulo(descripcion, costo, precio, cantidad, codigo, imagen_path, categoria);
         }
-        
+
         return null;
     }
 
@@ -230,33 +253,40 @@ public class Articulo implements Entidad
             int cantidad = (int) resultado.getValor("cantidad");
             String codigo = (String) resultado.getValor("codigo");
             String imagen_path = (String) resultado.getValor("imagen");
+            String categoria = (String) resultado.getValor("categoria");
 
-            return new Articulo(descripcion, costo, precio, cantidad, codigo, imagen_path);
+            return new Articulo(descripcion, costo, precio, cantidad, codigo, imagen_path, categoria);
         }
 
         return null;
     }
-    
+
     public static void cargarInventarioEnLista(ArrayList<Articulo> listaArticulos)
     {
         String query = "SELECT * FROM v_articulos WHERE estado = ? ORDER BY descripcion ASC";
         DBOperacion op = new DBOperacion(query);
         op.pasarParametro("activo");
         DBMatriz resultado = op.consultar();
-        
+
         while (resultado.leer())
         {
+            String categoria = (String) resultado.getValor("categoria");
+            if (categoria == null) {
+                categoria = "Ferretería general";
+            }
+
             Articulo articulo = new Articulo(
                     (String) resultado.getValor("descripcion"),
                     (Float) resultado.getValor("costo_unitario"),
                     (Float) resultado.getValor("precio_venta"),
                     (Integer) resultado.getValor("cantidad"),
                     (String) resultado.getValor("codigo"),
-                    (String) resultado.getValor("imagen") );
+                    (String) resultado.getValor("imagen"),
+                    categoria );
             listaArticulos.add(articulo);
         }
     }
-    
+
     public static int cantidadArticulosRegistrados()
     {
         String query = "SELECT COUNT(*) AS cantidad FROM v_articulos WHERE estado = ?";
@@ -269,7 +299,7 @@ public class Articulo implements Entidad
         }
         return 0;
     }
-    
+
     /**
      * Ingresa un nuevo movimiento en v_inventario y actualiza el total del stock (cantidad) en
      * v_artículos.
@@ -289,14 +319,14 @@ public class Articulo implements Entidad
         op.pasarParametro(id);
         op.pasarParametro(cantidad);
         op.ejecutar();
-    
+
         query = "UPDATE v_articulos SET cantidad = (SELECT SUM(cantidad) FROM v_inventario WHERE id_articulo = ?) WHERE id_articulo = ?;";
         op = new DBOperacion(query);
         op.pasarParametro(id);
         op.pasarParametro(id);
         op.ejecutar();
     }
-    
+
     /**
      * Consulta el stock del artículo.
      *
@@ -309,19 +339,19 @@ public class Articulo implements Entidad
         {
             return -1;
         }
-        
+
         String query = "SELECT cantidad FROM v_articulos WHERE id_articulo = ?";
         DBOperacion op = new DBOperacion(query);
         op.pasarParametro(id);
         DBMatriz resultado = op.consultar();
-        
+
         if (resultado.leer())
         {
             return (int) resultado.getValor("cantidad");
         }
         return -1;
     }
-    
+
     public void actualizar()
     {
         //Obetener vieja foto
@@ -335,22 +365,23 @@ public class Articulo implements Entidad
         }
 
         String query = "UPDATE v_articulos SET costo_unitario = ?, precio_venta = ?, cantidad = ?, " +
-                "codigo = ?, imagen = ? WHERE descripcion = ?";
+                "codigo = ?, imagen = ?, categoria = ? WHERE descripcion = ?";
         DBOperacion op = new DBOperacion(query);
         op.pasarParametro(costo);
         op.pasarParametro(precio);
         op.pasarParametro(cantidad);
         op.pasarParametro(codigo);
         op.pasarParametro(imagen_path);
+        op.pasarParametro(categoria);
         op.pasarParametro(descripcion);
 
         op.ejecutar();
     }
-    
+
     public void eliminar()
     {
         reiniciarStock();
-        
+
         String query = "UPDATE v_articulos SET estado = ? WHERE descripcion = ?";
         DBOperacion op = new DBOperacion(query);
         op.pasarParametro("inactivo");
@@ -361,13 +392,13 @@ public class Articulo implements Entidad
     public void reiniciarStock()
     {
         int stock = cantidadStock();
-    
+
         if(stock > 0)
         {
             agregarStock(-stock,Calendar.getInstance().getTime());
         }
     }
-    
+
     public void activar()
     {
         String query = "UPDATE v_articulos SET estado = ? WHERE descripcion = ?";
@@ -376,7 +407,7 @@ public class Articulo implements Entidad
         op.pasarParametro(descripcion);
         op.ejecutar();
     }
-    
+
     public static int calcularCantVendidosDia(int id, int fecha)
     {
         int cantidad = 0;

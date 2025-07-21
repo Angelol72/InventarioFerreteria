@@ -1,0 +1,310 @@
+[
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_attach_money_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_attach_money_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_category_outlined_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_category_outlined_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_category_white_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_category_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_fragment_estadisticas.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\fragment_estadisticas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\menu_top_bar.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\menu\\top_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable-xxxhdpi_icono_con_fondo.png.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable-xxxhdpi\\icono_con_fondo.png"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\font_amaranth_italic.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\font\\amaranth_italic.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_activity_historial_tasa.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\activity_historial_tasa.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_add_a_photo_black_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\add_a_photo_black_24dp.xml"
+    },
+    {
+        "merged": "com.teamihc.inventas.app-debug-22:/layout_fragment_inventario.xml.flat",
+        "source": "com.teamihc.inventas.app-main-24:/layout/fragment_inventario.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_fragment_inventario.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\fragment_inventario.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable-xxxhdpi_inventario_bienvenida.png.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable-xxxhdpi\\inventario_bienvenida.png"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_color_primario.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\color_primario.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_info_producto.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_info_producto.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_fragment_lista_productos_venta.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\fragment_lista_productos_venta.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_carrito_bienvenida.png.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\carrito_bienvenida.png"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_degradado.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\degradado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_payments_white_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_payments_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\arrow_back_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_label_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\label_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_create_black_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_create_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_btn_aceptar.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\btn_aceptar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_add_shopping_cart_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\add_shopping_cart_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_info_venta.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_info_venta.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\font_amaranth.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\font\\amaranth.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\font_amaranth_bold.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\font\\amaranth_bold.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_activity_notaventa.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\activity_notaventa.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_consultar_dia_ventas.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_consultar_dia_ventas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_logo_toolbar.png.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\logo_toolbar.png"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_topbar_historial_tasa.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_topbar_historial_tasa.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_seleccionar_cantidad.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_seleccionar_cantidad.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_arrow_drop_up_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_arrow_drop_up_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_baseline_delete_24.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_baseline_delete_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_activity_carrito.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\activity_carrito.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_search_white_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_search_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_baseline_done_24.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_baseline_done_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\font_roboto_light.ttf.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\font\\roboto_light.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_menu_white_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_menu_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_remove_black_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\remove_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_add_black_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\add_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_info_venta_historial.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_info_venta_historial.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_payments_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_payments_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_analytics_white_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_analytics_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\menu_crear_bar.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\menu\\crear_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_description_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_description_24px.xml"
+    },
+    {
+        "merged": "com.teamihc.inventas.app-debug-22:/layout_activity_crear_producto.xml.flat",
+        "source": "com.teamihc.inventas.app-main-24:/layout/activity_crear_producto.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_date_range_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\date_range_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_search_background.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\search_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable-xxxhdpi_ventas_bienvenida.png.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable-xxxhdpi\\ventas_bienvenida.png"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_topbar.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_topbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_lapiz_blanco.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\lapiz_blanco.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_info_tasa.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_info_tasa.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\font_amaranth_bold_italic.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\font\\amaranth_bold_italic.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_save_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_save_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_point_of_sale_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\point_of_sale_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable-xxxhdpi_icono_sin_fondo.png.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable-xxxhdpi\\icono_sin_fondo.png"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_topbar_crear_articulo.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_topbar_crear_articulo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_activity_crear_producto.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\activity_crear_producto.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\font_roboto_bold.ttf.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\font\\roboto_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_done_black_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\done_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_close_white_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_close_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_fragment_ventas.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\fragment_ventas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_arrow_drop_down_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_arrow_drop_down_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\menu_nav_bar.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\menu\\nav_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_activity_historial_ventas.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\activity_historial_ventas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_bottom_navigation_selector.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\bottom_navigation_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_info_producto_factura.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_info_producto_factura.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_fragment_tasas.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\fragment_tasas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_circle_24px.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_circle_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_home_white_24dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_home_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_cambiar_tasa.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_cambiar_tasa.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\layout_view_spinner_estadistica.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\layout\\view_spinner_estadistica.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_ic_add_black_48dp.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\ic_add_black_48dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\drawable_img_marquesa_de_chocolate_con_ron_6900_orig.jpg.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\drawable\\img_marquesa_de_chocolate_con_ron_6900_orig.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-debug-22:\\font_roboto.xml.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\daemon\\8.12\\com.teamihc.inventas.app-main-24:\\font\\roboto.xml"
+    }
+]
